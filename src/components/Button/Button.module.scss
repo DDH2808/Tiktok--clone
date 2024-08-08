@@ -11,6 +11,7 @@
     background-color: var(--white);
     border: 1px solid transparent;
     user-select: none;
+    font-family: 'IBM Plex Sans', san-serif;
 
     + .wrapper {
         margin-left: 8px;
@@ -28,7 +29,8 @@
 }
 
 .icon {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 24px;
     text-align: center;
 }
