@@ -5,7 +5,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
+import { Link } from 'react-router-dom';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -139,7 +141,12 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link 
+                    to={routesConfig.home} 
+                    className={cx('logo-link')}
+                >
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
@@ -173,7 +180,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image  
-                                src='https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/4703b652e37ff95a0a31396e16108dd1~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=39930&refresh_token=635c2e301f5bc5631c0c4300770d5298&x-expires=1723194000&x-signature=yl8XfBTlnVWgPsSM9ZiWrvXOiz8%3D&shp=a5d48078&shcp=81f88b70' 
+                                src='https://th.bing.com/th/id/OIP.Q4qJvu0XqguTnYAQQnm8XwHaEK?w=317&h=180&c=7&r=0&o=5&pid=1.7' 
                                 className={cx('user-avatar')} 
                                 alt="Nguyen Van A" 
                             />
